@@ -21,9 +21,9 @@ def build_stl_viewer(project_name: str, stls: list[Path]) -> str:
 
 <script type="module">
 
-import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js";
-import {{ OrbitControls }} from "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/controls/OrbitControls.js";
-import {{ STLLoader }} from "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/loaders/STLLoader.js";
+import * as THREE from "https://esm.sh/three@0.161.0";
+import {{ OrbitControls }} from "https://esm.sh/three@0.161.0/examples/jsm/controls/OrbitControls.js";
+import {{ STLLoader }} from "https://esm.sh/three@0.161.0/examples/jsm/loaders/STLLoader.js";
 
 const container = document.getElementById("viewer-{project_name}");
 
