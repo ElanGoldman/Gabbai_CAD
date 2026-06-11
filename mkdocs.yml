@@ -5,6 +5,7 @@ site_url: ""
 theme:
   name: material
   features:
+    - navigation.indexes
     - navigation.expand
     - navigation.sections
     - search.highlight
