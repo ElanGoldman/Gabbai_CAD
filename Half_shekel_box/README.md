@@ -1,5 +1,9 @@
-Box for collecting half shekels on eruv purim. The hole on top is fit for American 1/2 dollar coins. 
-The slot is sized so other coins and bills can fit through, but the $1/2 coins cannot.
-You need metal hinges to make this properly. They can be found on Amazon or any hardware store.
+# Box for collecting matanos l'evyonim
 
-Intended to be laser cut and then glued together.
+The hole on top is fit to hold American 1/2 dollar coins for machaztit hashekel.
+
+The slot is sized so other coins and bills can fit through, but the $1/2 coins cannot, so no one puts those through by accident.
+
+You also need metal hinges for this project. They can be found on Amazon or any hardware store.
+
+Intended for the walls to be laser cut and then glued together.
