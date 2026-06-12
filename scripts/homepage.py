@@ -2,9 +2,11 @@ from pathlib import Path
 
 
 def read_summary(readme_path: Path) -> str:
-    text = readme_path.read_text(encoding="utf8")
-    lines = text.strip().splitlines()
-    return lines[0] if lines else ""
+    for line in readme_path.read_text(encoding="utf8").splitlines():
+        stripped = line.strip()
+        if stripped:
+            return stripped.lstrip("#").strip()
+    return ""
 
 
 def pick_preview_stl(project: Path) -> Path | None:
@@ -26,15 +28,15 @@ def build_homepage(projects: list[Path], docs: Path) -> None:
 
         preview_html = ""
         if preview:
-            preview_html = f'<div id="{container_id}" style="width:100%; height:220px; background:#f5f5f5;"></div>\n  '
+            preview_html = f'\n  <div id="{container_id}" style="width:100%; height:220px; background:#f5f5f5;"></div>'
             viewers.append((container_id, f"{p.name}/{preview.name}"))
 
         cards.append(f"""
 <div class="card">
-  {preview_html}<div style="padding:16px;">
+  <div style="padding:16px;">
     <h2><a href="{p.name}/">{p.name}</a></h2>
     <p>{summary}</p>
-  </div>
+  </div>{preview_html}
 </div>
 """)
 
