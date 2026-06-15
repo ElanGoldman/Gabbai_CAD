@@ -44,7 +44,10 @@ def build_homepage(projects: list[Path], docs: Path) -> None:
 
     root_readme = (docs.parent / "README.md").read_text(encoding="utf8")
 
-    homepage = f"""
+    homepage = f"""---
+title: Home
+---
+
 {root_readme}
 
 ---
