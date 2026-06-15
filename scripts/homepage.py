@@ -42,8 +42,14 @@ def build_homepage(projects: list[Path], docs: Path) -> None:
 
     viewer_script = _build_viewer_script(viewers) if viewers else ""
 
+    root_readme = (docs.parent / "README.md").read_text(encoding="utf8")
+
     homepage = f"""
-# CAD Library
+{root_readme}
+
+---
+
+## Projects
 
 <div class="grid">
 {''.join(cards)}
