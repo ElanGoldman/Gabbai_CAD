@@ -22,3 +22,15 @@ markdown_extensions:
 docs_dir: site_docs
 
 use_directory_urls: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ElanGoldman/Gabbai_CAD
+      name: GitHub
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/elangoldman/
+      name: LinkedIn
+    - icon: fontawesome/solid/globe
+      link: https://elangoldman.com
+      name: Personal Site
