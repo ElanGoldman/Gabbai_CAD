@@ -101,10 +101,13 @@ import {{ STLLoader }} from "https://esm.sh/three@0.161.0/examples/jsm/loaders/S
     controls.autoRotate = true;
     controls.autoRotateSpeed = 1.5;
 
-    scene.add(new THREE.AmbientLight(0xffffff, 0.6));
-    const light = new THREE.DirectionalLight(0xffffff, 0.8);
-    light.position.set(10, 10, 10);
-    scene.add(light);
+    scene.add(new THREE.HemisphereLight(0xffffff, 0x444444, 0.5));
+    const keyLight = new THREE.DirectionalLight(0xffffff, 1.2);
+    keyLight.position.set(10, 10, 10);
+    scene.add(keyLight);
+    const fillLight = new THREE.DirectionalLight(0xffffff, 0.3);
+    fillLight.position.set(-10, -5, -10);
+    scene.add(fillLight);
 
     new STLLoader().load(url, (geometry) => {{
         const material = new THREE.MeshStandardMaterial({{ color: 0x0077ff }});

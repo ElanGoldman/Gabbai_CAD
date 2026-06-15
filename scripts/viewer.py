@@ -54,10 +54,13 @@ Object.assign(grid.style, {{
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
 
-    scene.add(new THREE.AmbientLight(0xffffff, 0.6));
-    const light = new THREE.DirectionalLight(0xffffff, 0.8);
-    light.position.set(10, 10, 10);
-    scene.add(light);
+    scene.add(new THREE.HemisphereLight(0xffffff, 0x444444, 0.5));
+    const keyLight = new THREE.DirectionalLight(0xffffff, 1.2);
+    keyLight.position.set(10, 10, 10);
+    scene.add(keyLight);
+    const fillLight = new THREE.DirectionalLight(0xffffff, 0.3);
+    fillLight.position.set(-10, -5, -10);
+    scene.add(fillLight);
 
     new STLLoader().load(filename, (geometry) => {{
         const material = new THREE.MeshStandardMaterial({{ color: 0x0077ff }});
